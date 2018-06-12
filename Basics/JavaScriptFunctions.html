@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fundamentals JavaScript</title>
+</head>
+<body>
+    <p id="demo"></p>
+  <script>
+ 	
+  /* Build-in functions*/
+  var myArray = ['I', 'love', 'chocolate', 'frogs'];
+  var madeAString = myArray.join(' ');
+  console.log(madeAString);
+  var myNumber = Math.random();
+  console.log(myNumber);
+
+  /* Programmer-made functions */
+  function draw() { //This function draws 100 random circles inside an <canvas> element
+    ctx.clearRect(0,0,WIDTH,HEIGHT);
+    for (var i = 0; i < 100; i++) {
+      
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(255,0,0,0.5)';
+      ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+      ctx.fill();
+    }
+  }
+
+  /* Anonymous functions */
+  var myButton = document.querySelector('button');
+  myButton.onclick = function() {
+    alert('hello');
+  }
+  </script>
+</body>
+</html>
